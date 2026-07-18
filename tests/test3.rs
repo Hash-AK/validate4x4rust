@@ -1,8 +1,10 @@
 // https://doc.rust-lang.org/rust-by-example/std_misc/file/open.html
 
-fn split(input:String) -> Vec<i32> {
-   return input.split_whitespace().map(|s| s.parse().expect("Not a valid number")).collect();
-}
+//fn split(input:String) -> Vec<i32> {
+//   return input.split_whitespace().map(|s| s.parse().expect("Not a valid number")).collect();
+//}
+
+use validate4x4rust::split;
 
 #[cfg(test)]
 mod tests {
