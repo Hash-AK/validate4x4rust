@@ -19,6 +19,7 @@ mod tests {
     #[test]
     fn test_vec3() {
         let mut v = Vec::new();
+        // mod hk
 	// comment b0
     let input = "10 20 30 40 50";
         // Parse into a Vector of integers
