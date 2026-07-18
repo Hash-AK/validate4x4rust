@@ -21,6 +21,7 @@ mod tests {
         let mut v = Vec::new();
         // mod hk
 	// comment b0
+	// mod jmh
     let input = "10 20 30 40 50";
         // Parse into a Vector of integers
         let numbers: Vec<i32> = input.split_whitespace().map(|s| s.parse().expect("Not a valid number")).collect();
