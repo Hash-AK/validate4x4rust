@@ -1,5 +1,19 @@
 use std::io::{self, BufRead};
 fn main() {
+
+//  v = read();
+//  if(validate(v)) {
+//    println!("ok");
+//  } else {
+//    println!("not ok");
+//  }
+//
+//
+//}
+//
+//fn read()
+//{
+    // declare v
     // Acquire a handle to the standard input
     let stdin = io::stdin();
     
@@ -8,6 +22,7 @@ fn main() {
         match line {
             Ok(content) => {
                 println!("Processed: {}", content);
+		//v = cnvToVec(content);
             }
             Err(error) => {
                 eprintln!("Error reading line: {}", error);
@@ -15,4 +30,5 @@ fn main() {
             }
         }
     }
+//    return v;
 }
