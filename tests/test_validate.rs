@@ -3,10 +3,7 @@ mod tests {
     // Note this useful idiom: importing names from outer (for mod tests) scope.
     use super::*;
     use validate4x4rust::split;
-    fn addline(line_to_add:String, v:&mut Vec<Vec<i32>>) {
-        let numbers: Vec<i32> = split(line_to_add.to_string());
-        v.push(numbers);
-    }
+    use validate4x4rust::addline;
     fn validate4x4(vector:Vec<Vec<i32>>) -> bool {
         return false;
     }
@@ -21,7 +18,7 @@ mod tests {
     }
     
     #[test]
-    fn test_vec3() {
+    fn test_validate() {
         let mut v = Vec::new();
         let line1 = "1 2 3 4";
         addline(line1.to_string(), &mut v);
