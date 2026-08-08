@@ -12,11 +12,19 @@ mod tests {
         }
         return true;
     }
+    fn validate_line(line:Vec<i32>) -> bool {
+        let mut checkv = vec![false,false,false,false];
+        for i in 0..3 {
+            if checkv[line[i]-1] == true { return false }
+            checkv[line[i]-1] = true
+        }
+        return true
+    }
 
     fn validate4x4(vector:Vec<Vec<i32>>) -> bool {
         return false;
     }
-
+    
     fn test_setup() -> Vec<Vec<i32>> {
         let mut v = Vec::new();
         let line1 = "1 2 3 4";
@@ -29,7 +37,7 @@ mod tests {
         addline(line4.to_string(), &mut v);
         return v;
     }
-
+    
     #[test]
     fn test_vector1() {
         let input = "10 20 30 40 50";
@@ -38,7 +46,17 @@ mod tests {
         let numbers: Vec<i32> = split(input.to_string());
         assert_eq!(numbers[0], 10);
     }
-    
+
+    #[test]
+    fn test_validate_line_fail(){
+        let mut v = vec![1,2,3,3];
+        assert!(!validate_line(v));
+    }
+    #[test]
+    fn test_validate_line() {
+        let mut v = test_setup();
+        assert!(validate_line(<Vec<i32> as Clone>::clone(&v[0])));
+    }
     #[test]
     fn test_validate_size() {
         let mut v = test_setup();
